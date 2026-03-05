@@ -1,0 +1,116 @@
+This project demonstrates a scalable and highly available web architecture using AWS cloud infrastructure.
+
+The main objective of this project was to implement load balancing and automatic scaling using AWS services.
+
+Architecture design ensures that user traffic is distributed across multiple EC2 instances using Application Load Balancer.
+
+✅ Architecture Design
+
+Users → Application Load Balancer → EC2 Instances (Multi Availability Zones) → Apache Web Server → Response
+
+Services Used:
+
+Amazon EC2
+
+Application Load Balancer
+
+Auto Scaling Group
+
+CloudWatch Monitoring
+
+Virtual Private Cloud (VPC)
+
+✅ Architecture Diagram Explanation
+
+The system works as follows:
+
+Users send web requests through browser or mobile device.
+
+Application Load Balancer receives traffic.
+
+Load Balancer distributes requests across EC2 instances.
+
+Auto Scaling Group manages instance creation and deletion.
+
+CloudWatch monitors CPU utilization.
+
+✅ AWS Services Used
+
+Amazon EC2 → Virtual machine hosting Apache web server.
+
+Elastic Load Balancer → Distributes traffic across instances.
+
+Auto Scaling Group → Automatically scales instances based on load.
+
+Amazon CloudWatch → Monitors performance metrics.
+
+Amazon VPC → Provides network isolation.
+
+✅ Deployment Steps
+
+Launch EC2 Instance
+
+Install Apache Web Server
+
+Create Application Load Balancer
+
+Configure Target Group
+
+Setup Auto Scaling Group
+
+Configure CPU Target Tracking Policy
+
+Test using stress tool
+
+✅ Testing Method
+
+Load testing was performed using stress tool.
+
+Command used:
+
+sudo apt update
+sudo apt install stress -y
+stress --cpu 2 --timeout 300
+
+Monitoring was done using CloudWatch metrics.
+
+✅ Screenshots Included
+
+Take screenshots of following:
+
+EC2 Instance Running Status
+
+Apache Server Working Page
+
+Load Balancer DNS Testing
+
+Target Group Healthy Status
+
+Auto Scaling Activity Logs
+
+CloudWatch CPU Graph
+
+New Instance Launch Event
+
+✅ Project Achievements
+
+✔ Multi Availability Zone Deployment
+✔ Load Balancing Implementation
+✔ Automatic Scaling Based on CPU Load
+✔ High Availability Architecture
+✔ Real-time Monitoring
+
+✅ Folder Structure Recommendation
+
+AWS-ALB-ASG-Project/
+documentation/
+screenshots/
+architecture-diagram/
+scripts/
+app/
+
+✅ Conclusion
+
+This project demonstrates practical cloud infrastructure implementation using AWS services.
+
+The architecture provides scalability, reliability, and automated resource management.
